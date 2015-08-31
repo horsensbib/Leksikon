@@ -16,8 +16,9 @@ Leksikon supports the following plugins:
 - [WP Google Search](https://wordpress.org/plugins/wp-google-search/)
 
 ## On Setting Up Google Custom Search
+Horsens Leksikon contains a lot of posts and loads of attached PDFs, so we need a better search engine than the one WordPress can offer.
 
-You can set up a custom [Google search engine for your domain or web site here](https://cse.google.com/). These are the options You should set up for use with the Leksikon theme.
+You can set up a custom [Google search engine for your domain or web site here](https://cse.google.com/). These are the options You should set up for use with the WP Google Search plugin and the Leksikon theme.
 
 ### The Layout Tab
 In [the "Layout" tab](https://cse.google.com/cse/lookandfeel/layout), You will find some layout options for your custom search engine. Leksikon is designed to work with the "Results Only" layout.
