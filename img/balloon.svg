@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="balloon_layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 84 122" enable-background="new 0 0 84 122" xml:space="preserve">
+<g id="balloon">
+	<g id="XMLID_10_">
+		<path id="XMLID_12_" fill="#D6695B" d="M84,46.4C84,21.2,65.2,0.7,42,0.7S0,21.2,0,46.4c0,17.2,16.7,40.5,29.5,53.6h23.7
+			C66,86.9,84,63.6,84,46.4z"/>
+		<path id="XMLID_11_" fill="#FFFFFF" d="M57.8,46.4c0-25.2-7.6-45.7-16.9-45.7S24,21.2,24,46.4c0,17.2,5.1,40.5,10.2,53.6h13.4
+			C52.8,86.9,57.8,63.6,57.8,46.4z"/>
+	</g>
+	<ellipse id="XMLID_9_" fill="#68544B" cx="37.6" cy="108.8" rx="1.8" ry="2.7"/>
+	<circle id="XMLID_8_" fill="#574137" cx="36.8" cy="105" r="1.5"/>
+	<ellipse id="XMLID_7_" fill="#68544B" cx="44.2" cy="108.8" rx="1.8" ry="2.7"/>
+	<circle id="XMLID_6_" fill="#574137" cx="45" cy="105" r="1.5"/>
+	<polygon id="XMLID_5_" fill="#574137" points="46.5,122 36.7,122 35.3,109.4 47.9,109.4 	"/>
+	
+		<line id="XMLID_4_" fill="none" stroke="#9A8D87" stroke-width="0.7119" stroke-miterlimit="10" x1="30.8" y1="99.9" x2="35.3" y2="109.4"/>
+	
+		<line id="XMLID_3_" fill="none" stroke="#9A8D87" stroke-width="0.7119" stroke-miterlimit="10" x1="47.9" y1="109.4" x2="51.9" y2="99.9"/>
+	
+		<line id="XMLID_2_" fill="none" stroke="#9A8D87" stroke-width="0.7119" stroke-miterlimit="10" x1="41.3" y1="109.4" x2="41.3" y2="99.9"/>
+</g>
+</svg>

@@ -1,0 +1,126 @@
+.site-content__inner {
+	@extend %row;
+}
+
+// Featured Image
+// --------------
+.site-main .attachment-featured-small {
+	border-radius: .5em;
+	margin-bottom: 2em;
+}
+
+// The Post
+// --------
+.single-post {
+	#primary {@include span(12 of 12);}
+	.type-post {
+		@include breakpoint($large) {
+			@include font-size(1.25);
+			@include span(8 of 12);
+			@include push(2);
+		
+			h1 {@include font-size(3.25);margin-bottom: .75em;}
+			h2 {@include font-size(2);}
+			h3 {@include font-size(1.5);}
+			h4 {@include font-size(1);}
+		
+			position: relative;
+		}
+		
+		.tags-links {
+			@include font-size(1);
+			padding: 0 0 1.5em;
+		}
+		.avatar {float: left;}
+		.edit-link {
+			@extend .alignright;
+			margin-top: 3em;
+		}
+	}
+	
+	.post-navigation,
+	.comments-area {
+		@include breakpoint($large) {
+			@include span(8 of 12);
+			@include push(2);
+		}
+	}
+}
+// If post has table of contents
+.single-post .has-toc #primary {
+	@include breakpoint($large) {
+		.type-post,
+		.post-navigation,
+		.comments-area {@include push(1);}
+	}
+}
+
+// Pages
+// -----
+
+// Page with left sidebar
+// ----------------------
+.page-template-default #primary {
+	@include span(12 of 12);
+	@include breakpoint($medium_up) {@include span(9 of 12 last);}
+}
+.page-template-default #secondary {
+	@include span(12 of 12);
+	@include breakpoint($medium_up) {
+		@include span(3 of 12);
+		margin-top: 3.6em;
+	}
+}
+
+// Page full width
+// ---------------
+.page-template-page--fullwidth #primary {
+	@include span(12 of 12);
+}
+
+.sticky {
+}
+
+.hentry {
+}
+
+.entry-footer {
+	@include clearfix();
+	display: block;
+	padding: 0 0 1.5em;
+}
+.single .entry-meta {
+	p {
+		color: $color__text-input;
+		padding-left: 100px;
+		
+		&.byline {color: $color__text-main;}
+		&.bio {
+			@include font-size(1);
+			margin-bottom: 1em;
+		}
+	}
+	.posted span {
+		@include font-size(.75);
+		color: lighten($color__text-input,20%);
+	}
+}
+.single .byline,
+.group-blog .byline {
+	margin-bottom: 0;
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+		&:hover,
+		&:focus,
+		&:active {text-decoration: underline;}
+	}
+}
+
+.page-content,
+.entry-content {padding: 0 0 1.5em;}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}

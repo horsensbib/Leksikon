@@ -1,0 +1,152 @@
+// CONTAINER
+// ----------
+
+.carousel {
+	@extend %row;
+}
+
+.carousel__inner {
+	@include span(12 of 12);
+	
+	background: mix($color__brand--accent,$color__background-body,9.5%);
+	border: 2px solid $color__brand--accent;
+	border-radius: 0.5em;
+	margin-bottom: 2em;
+}
+
+.carousel__inner__slider {
+	@include span(10 of 12);
+	@include push(1);
+	
+	padding-top: 1em; 
+	
+	.post {
+		padding: 1.5em 0;
+	}
+	h2, p {
+		margin: 0;
+	}
+	h2 {
+		@include font-size(1.5);
+		@include breakpoint($medium_up) {
+			@include font-size(2);
+		}
+	}
+	p {
+		@include font-size(1);
+		@include breakpoint($medium_up) {
+			@include font-size(1.5);
+		}
+	}
+	.entry-title a {
+		color: $color__text-main;
+		text-decoration: none;
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+// Slick Slider
+// ------------
+@charset "UTF-8";
+@import "../../js/slick/slick";
+
+// Default Variables
+$slick-loader-path: "./js/slick/" !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+/* Slider */
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+		@extend .button;
+		@extend .button--large;
+		@extend .button--solid--color__secondary;
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 0px;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -10px;
+    padding: 0;
+    outline: none;
+    &.slick-disabled:before {
+        opacity: $slick-opacity-not-active;
+    }
+}
+
+.slick-prev {
+    left: -9%;
+}
+
+.slick-next {
+    right: -9%;
+}
+
+/* Dots */
+
+.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+	position: absolute;
+	bottom: -45px;
+	list-style: none;
+	display: block;
+	text-align: center;
+	margin-left: 0;
+	padding: 0;
+	width: 100%;
+	li {
+		position: relative;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		margin: 0 5px;
+		padding: 0;
+		cursor: pointer;
+		button {
+			background: mix($color__brand--accent,$color__background-body,9.5%);
+			border: 1px solid $color__brand--accent;
+			border-radius: 8px;
+			color: transparent;
+			line-height: 0;
+			font-size: 0;
+			height: 16px;
+			width: 16px;
+			outline: none;
+			overflow: hidden;
+			cursor: pointer;
+			&:hover, &:focus {
+				background: $color__brand--accent;
+			}
+		}
+		&.slick-active button {
+			background: $color__brand--accent;
+		}
+	}
+}

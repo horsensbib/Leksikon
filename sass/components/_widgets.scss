@@ -1,0 +1,51 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+	.widget-title {
+		@include font-size(1.25);
+	}
+	ul {
+		list-style: none;
+		margin: 0 0 1.5em;
+		padding: 0;
+	}
+	li {
+		padding: .25em 0 .25em 1.5em;
+		position: relative;
+		word-break: hyphenate;
+		word-wrap: break-word;
+		
+		@extend %list-chevron-before;
+		&::before {
+			color: $color__brand--accent;
+		}
+	}
+}
+
+/* Recent Entries */
+#secondary .widget_recent_entries {
+	li {
+		&::before {display: none;}
+		
+		padding: .5em 0;
+		border-bottom: 1px solid $color__background-hr;
+	}
+	.post-date {
+		color: lighten($color__text-input, 20%);
+		display: block;
+	}
+}
+
+
+/* Search widget. */
+.widget_search .search-submit {
+}
+
+/* Tag Cloud */
+.tagcloud {
+	@extend .tags-links;
+}

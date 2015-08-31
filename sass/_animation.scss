@@ -1,0 +1,130 @@
+#wpadminbar,
+.site {animation: fade_in .5s ease-in 1;}
+
+// Animated Clouds
+// http://thecodeplayer.com/walkthrough/pure-css3-animated-clouds-background	
+	.cloud {
+		display: block;
+		position:absolute;
+		background-image: url(img/cloud.png);
+		background-image: url(img/cloud.svg);
+		background-size: contain;
+		z-index: 3;
+		// Enable GPU
+		// http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css
+		transform: translateZ(0);
+
+		backface-visibility: hidden;
+
+		perspective: 1000;
+	}
+	
+	.x1 {
+		width: 300px;
+		height: 83px;
+		
+		top: 20%;
+
+		animation: move_left_to_right 50s linear infinite;
+	}
+	.x2 {
+		width: 224px;
+		height: 62px;
+
+		left: 20%;
+		top: 30%;
+
+		animation: move_left_to_right 90s linear infinite;
+	}
+
+	.x3 {
+		width: 224px;
+		height: 62px;
+		
+		left: 50%; 
+		top: 8%;
+
+		animation: move_left_to_right 60s linear infinite;
+	}
+
+	.x4 {
+		width: 250px;
+		height: 69px;
+		
+		left: 80%; 
+		top: 2%;
+
+		animation: move_left_to_right 80s linear infinite;
+	}
+
+	.x5 {
+		width: 224px;
+		height: 62px;
+		
+		left: 20%; 
+		top: 20%;
+		
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+
+		animation: move_left_to_right 70s linear infinite;
+	}
+	
+	.balloon {
+		display: block;
+		position:absolute;
+		background-image: url(img/balloon.png);
+		background-image: url(img/balloon.svg);
+		background-size: contain;
+		z-index: 4;
+		width: 42px;
+		height: 61px;
+		
+		left: 55%; 
+		top: 10%;
+		
+		animation: move_left_to_right 120s linear infinite;
+	}
+	
+	.boat {
+		display: block;
+		position: absolute;
+		background-image: url(img/boat.png);
+		background-image: url(img/boat.svg);
+		background-size: contain;
+		z-index: 4;
+		width: 154px;
+		height: 23px;
+		
+		left: 60%; 
+		top: 3em;
+		
+		animation: move_right_to_left 30s linear infinite;
+	}
+	
+@keyframes move_left_to_right {
+	0% {margin-left: -1000px;}
+	100% {margin-left: 1000px;}
+}
+	
+@keyframes move_right_to_left {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+	
+@keyframes move_bg {
+	0% {background-position: left bottom;}
+	100% {background-position: right bottom;}
+}
+	
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

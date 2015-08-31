@@ -1,0 +1,52 @@
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+.tags-links {
+	a {
+		border-radius: 2em;
+		border: 1px solid $color__brand--secondary;
+		display: inline-block;
+		font-style: italic;
+		margin: .25em 0;
+		padding: .3em .8em;
+		text-decoration: none;
+		&:hover,
+		&:focus,
+		&:active {
+			background: $color__brand--secondary;
+			color: $color__background-body;
+		}
+	}
+}
+
+.edit-link {
+	@include font-size(.75);
+	&::before {
+		@include font-size(1);
+		color: $color__brand--accent;
+		color: $color__brand--accent;
+		content: 'create';
+		font-family: 'Material Icons';
+		margin-right: .25em;
+		vertical-align: middle;
+		-webkit-font-feature-settings: 'liga';
+		-webkit-font-smoothing: antialiased;
+	}
+}

@@ -1,0 +1,22 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+$susy: (
+  columns: 12,
+  gutters: 1,
+  container: 80em,
+  math: fluid,
+  output: float,
+  gutter-position: split,
+  global-box-sizing: border-box,
+  debug: (
+  	image: hide,
+		color: rgba(#66f, .1)
+	),
+);
+
+// Breakpoints
+// -----------
+$large: 1000px;
+$medium: 750px 999px;
+$medium_up: 750px;

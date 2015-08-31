@@ -1,0 +1,11 @@
+.search-results {
+	.entry-title {@include font-size(1.5);}
+	.entry-footer {border-top: 1px solid $color__background-pre;}
+	.posted-on,
+	.updated-on {
+		color: lighten($color__text-input, 20%);
+	}
+	.updated-on::before {
+		content: ' - ';
+	}
+}

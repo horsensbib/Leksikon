@@ -1,0 +1,41 @@
+ul, ol {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+	li li {
+		list-style: circle;
+		
+		li {list-style: square;}
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+	padding: 0;
+}
+
+// Definition Lists
+dl {
+  margin-bottom: 1.5em;
+}
+dt,
+dd {
+  line-height: $font__line-height-body;
+  @include font-size(1);
+}
+dt {
+  font-weight: $font__main--bold;
+  line-height: $font__line-height-body; // fix jank Helvetica Neue font bug
+}
+dd {
+  margin-left: .75em;
+}

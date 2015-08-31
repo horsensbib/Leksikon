@@ -1,0 +1,20 @@
+.site-header {
+	background: mix($color__brand--primary,$color__background-body,19.5%) url(img/stripes.png) top repeat-x;
+}
+.site-header__inner {
+  @include clearfix; 
+	@extend %row;
+	
+	padding: 2em 0 1em;
+}
+
+.site-branding {
+  @include span(7 of 12);
+  padding-top: 0.5em;
+	@include breakpoint($medium_up) {
+	  @include span(3 of 12);
+	}
+	@include breakpoint($medium) {
+		padding-top: .15em;
+	}
+}

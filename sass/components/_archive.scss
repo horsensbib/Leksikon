@@ -1,0 +1,107 @@
+// Archive, Categories, Search, And Tags
+// -------------------------------------
+
+.blog,
+.archive,
+.search-results {
+	#primary {
+		@include span(12 of 12);
+	
+		@include breakpoint($medium_up) {@include span(9 of 12);}
+	}
+	#secondary {
+		@include span(12 of 12);
+	
+		@include breakpoint($medium_up) {
+			@include span(3 of 12 last);
+			margin-top: 3.6em;
+		}	
+	}
+	.taxonomy-description {@include font-size(1.25);}
+}
+
+// Categories & Alphabetic Index Page Templates
+// --------------------------------------------
+.page-template-page--categories,
+.page-template-page--alphabetic {
+	
+	#primary {
+		@include span(12 of 12 nest);
+		@include breakpoint($medium_up) {@include span(9 of 12 nest);}
+	}
+	
+	.breadcrumbs,
+	.type-page {@include span(12 of 12);}
+	.entry-content {@include font-size(1.25);}
+	
+	#secondary {
+		@include span(12 of 12);
+	
+		@include breakpoint($medium_up) {
+			@include span(3 of 12 last);
+			margin-top: 3.6em;
+		}		
+	}
+	
+}
+.the-category {
+	@include span(6 of 12);
+	@include breakpoint($medium_up) {@include span(4 of 12);}
+	
+	background: mix($color__brand--accent,$color__background-body,9.5%);
+	border-radius: 0.5em;	
+	height: 30em;
+	margin-bottom: gutter()*2;
+	overflow: hidden;
+	word-break: hyphenate;
+	word-wrap: break-word;
+
+	h2 {padding: .75em .75em 0;}
+	ol {padding: 0 1em;}
+	p {
+		padding: 1em;
+		text-align: center;
+	}
+	
+	.button {
+		@include breakpoint($large) {
+			@include font-size(1);
+			border-radius: .5em;
+		}
+		@include font-size(.75);
+		border-radius: .75em;
+	}
+}
+
+.category-children {
+	list-style: none;
+	
+	li {
+		display: inline;
+		font-style: italic;
+		
+		&::after {
+			content: '\2022';
+			margin: 0 .5em;
+		}
+		&:last-child::after {
+			content: '';
+			margin: 0;
+		}
+	}
+}
+.category-posts {
+	list-style: none;
+	border-top: 2px solid $color__brand--accent;
+	
+	li {
+		border-bottom: 1px solid $color__brand--accent;
+		display: block;
+		padding: .5em 1em;
+		
+		a {
+			color: $color__text-main;
+			text-decoration: none;
+		}
+	}
+}

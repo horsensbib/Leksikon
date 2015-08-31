@@ -1,0 +1,550 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: leksikon\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2015-08-30 14:33+0200\n"
+"PO-Revision-Date: 2015-08-30 14:34+0200\n"
+"Last-Translator: Morten Brunbjerg Bech <bech@rephlex.dk>\n"
+"Language-Team: \n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html__;esc_html_e;esc_html_x;_nx;_n;"
+"esc_attr__;esc_attr_e;esc_attr_x;_ex\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: template-parts\n"
+"X-Poedit-SearchPath-2: inc\n"
+"X-Poedit-SearchPath-3: inc/template-tags.php\n"
+"X-Poedit-SearchPath-4: template-parts/content-cards.php\n"
+"X-Poedit-SearchPath-5: template-parts/content-carousel.php\n"
+"X-Poedit-SearchPath-6: template-parts/content-categories.php\n"
+"X-Poedit-SearchPath-7: template-parts/content-none.php\n"
+"X-Poedit-SearchPath-8: template-parts/content-page--frontpage.php\n"
+"X-Poedit-SearchPath-9: template-parts/content-page--no-title.php\n"
+"X-Poedit-SearchPath-10: template-parts/content-page.php\n"
+"X-Poedit-SearchPath-11: template-parts/content-search.php\n"
+"X-Poedit-SearchPath-12: template-parts/content-single.php\n"
+"X-Poedit-SearchPath-13: template-parts/content-summary.php\n"
+"X-Poedit-SearchPath-14: template-parts/content.php\n"
+"X-Poedit-SearchPathExcluded-0: js/leksikon.js\n"
+
+# @ _s
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! Den side kan vi ikke finde."
+
+# @ _s
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Der er tilsyneladende ingenting her. Prøv evt. et af linksene herunder eller "
+"søg."
+
+# @ _s
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Mest anvendte kategorier"
+
+# @ _s
+#: 404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Prøv at kigge i arkivet over måneder. %1$s"
+
+#: comments.php:29
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "En tanke om &ldquo;%2$s&rdquo;"
+
+# @ _s
+#: comments.php:38 comments.php:60
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+# @ _s
+#: comments.php:41 comments.php:63
+msgid "Older Comments"
+msgstr "Ældre kommentarer"
+
+# @ _s
+#: comments.php:42 comments.php:64
+msgid "Newer Comments"
+msgstr "Nyere kommentarer"
+
+# @ _s
+#: comments.php:76
+msgid "Comments are closed."
+msgstr "Der kan ikke kommenteres."
+
+#: footer.php:53
+msgid "Made with"
+msgstr "Bygget med"
+
+# @ _s
+#: footer.php:54
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:54
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: footer.php:55
+msgid "and"
+msgstr "og"
+
+#: footer.php:55
+msgid "a lot of love"
+msgstr "en masse kærlighed"
+
+#: footer.php:55
+msgid "by"
+msgstr "af"
+
+#: footer.php:56 inc/template-tags.php:121
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+# @ _s
+#: functions.php:54
+msgid "Primary Menu"
+msgstr "Primær menu"
+
+# @ _s
+#: functions.php:111
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:120
+msgid "Fat Footer - 1st column"
+msgstr "Sidefod - 1. kolonne"
+
+#: functions.php:129
+msgid "Fat Footer - 2nd column"
+msgstr "Sidefod - 2. kolonne"
+
+#: functions.php:138
+msgid "Fat Footer - 3rd column"
+msgstr "Sidefod - 3. kolonne"
+
+#: functions.php:147
+msgid "Fat Footer - 4th column"
+msgstr "Sidefod - 4. kolonne"
+
+#: functions.php:226
+msgid "Excerpt"
+msgstr "Uddrag"
+
+#: functions.php:312
+msgid "RSS URL"
+msgstr "RSS URL"
+
+#: functions.php:313
+msgid "Google Profile URL"
+msgstr "Google profil URL"
+
+#: functions.php:314
+msgid "Twitter Profile URL"
+msgstr "Twitter profil URL"
+
+#: functions.php:315
+msgid "Facebook Profile URL"
+msgstr "Facebook profil URL"
+
+#: functions.php:316
+msgid "Linkedin Profile URL"
+msgstr "Linkedin profil URL"
+
+# @ _s
+#: header.php:23
+msgid "Skip to content"
+msgstr "Spring til indhold"
+
+#: header.php:43
+msgid "<i class=\"material-icons md-16\">menu</i> Menu"
+msgstr "<i class=\"material-icons md-16\">menu</i> Menu"
+
+#: inc/customizer.php:22
+msgid "Logo Settings"
+msgstr "Logo indstillinger"
+
+#: inc/customizer.php:25
+msgid "Upload your logo here."
+msgstr "Upload dit logo her."
+
+#: inc/customizer.php:32
+msgid "Logo"
+msgstr "Logo"
+
+# @ _s
+#: inc/extras.php:52
+#, php-format
+msgid "Page %s"
+msgstr "Side %s"
+
+#: inc/leksikon__function--tinymce-ext.php:26
+msgid "Button (solid blue)"
+msgstr "Knap (massiv blå)"
+
+#: inc/leksikon__function--tinymce-ext.php:31
+msgid "Button (solid red)"
+msgstr "Knap (massiv rød)"
+
+#: inc/leksikon__function--tinymce-ext.php:36
+msgid "Button (solid yellow)"
+msgstr "Knap (massiv gul)"
+
+#: inc/leksikon__function--tinymce-ext.php:41
+msgid "Button (blue border)"
+msgstr "Knap (blå kant)"
+
+#: inc/leksikon__function--tinymce-ext.php:46
+msgid "Button (red border)"
+msgstr "Knap (rød kant)"
+
+#: inc/leksikon__function--tinymce-ext.php:51
+msgid "Button (yellow border)"
+msgstr "Knap (gul kant)"
+
+#: inc/leksikon__function--tinymce-ext.php:56
+msgid "Big button"
+msgstr "Stor knap"
+
+#: inc/leksikon__function--tinymce-ext.php:61
+msgid "Medium button"
+msgstr "Medium knap"
+
+#: inc/leksikon__function--tinymce-ext.php:66
+msgid "Small button"
+msgstr "Lille knap"
+
+# @ _s
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Artikel-navigation"
+
+# @ _s
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr "Ældre artikler"
+
+# @ _s
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr "Nyere artikler"
+
+# @ _s
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Artikel navigation"
+
+#: inc/template-tags.php:86
+#, php-format
+msgid "Posted on %s"
+msgstr "Udgivet %s"
+
+#: inc/template-tags.php:90
+msgid "Posted on"
+msgstr "Udgivet"
+
+#: inc/template-tags.php:91
+msgid "Updated on"
+msgstr "Opdateret"
+
+#: inc/template-tags.php:106
+msgid "Posted by "
+msgstr "Udgivet af "
+
+#: inc/template-tags.php:119
+msgid " "
+msgstr " "
+
+# @ _s
+#: inc/template-tags.php:139
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:141
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Udgivet i %1$s"
+
+#: inc/template-tags.php:144
+msgid "Posted"
+msgstr "Udgivet"
+
+#: inc/template-tags.php:149
+msgid "Updated on "
+msgstr "Opdateret "
+
+# @ _s
+#: inc/template-tags.php:154
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+# @ _s
+#: inc/template-tags.php:154
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+# @ _s
+#: inc/template-tags.php:154
+msgid "% Comments"
+msgstr "% kommentarer"
+
+# @ _s
+#: inc/template-tags.php:173
+#, php-format
+msgid "Category: %s"
+msgstr "Kategori: %s"
+
+#: inc/template-tags.php:175
+#, php-format
+msgid "Subject: %s"
+msgstr "Emne: %s"
+
+# @ _s
+#: inc/template-tags.php:177
+#, php-format
+msgid "Author: %s"
+msgstr "Skribent: %s"
+
+# @ _s
+#: inc/template-tags.php:179
+#, php-format
+msgid "Year: %s"
+msgstr "År: %s"
+
+#: inc/template-tags.php:179
+msgid "Y"
+msgstr "Y"
+
+# @ _s
+#: inc/template-tags.php:181
+#, php-format
+msgid "Month: %s"
+msgstr "Måned: %s"
+
+#: inc/template-tags.php:181
+msgid "F Y"
+msgstr "F Y"
+
+# @ _s
+#: inc/template-tags.php:183
+#, php-format
+msgid "Day: %s"
+msgstr "Dag: %s"
+
+#: inc/template-tags.php:183
+msgid "F j, Y"
+msgstr "F j, Y"
+
+#: inc/template-tags.php:186
+msgid "Asides"
+msgstr "Sidebemærkninger"
+
+#: inc/template-tags.php:188
+msgid "Galleries"
+msgstr "Gallerier"
+
+#: inc/template-tags.php:190
+msgid "Images"
+msgstr "Billeder"
+
+#: inc/template-tags.php:192
+msgid "Videos"
+msgstr "Videoer"
+
+#: inc/template-tags.php:194
+msgid "Quotes"
+msgstr "Citater"
+
+#: inc/template-tags.php:196
+msgid "Links"
+msgstr "Links"
+
+#: inc/template-tags.php:198
+msgid "Statuses"
+msgstr "Statusopdateringer"
+
+#: inc/template-tags.php:200
+msgid "Audio"
+msgstr "Lyd"
+
+#: inc/template-tags.php:202
+msgid "Chats"
+msgstr "Chat beskeder"
+
+# @ _s
+#: inc/template-tags.php:205
+#, php-format
+msgid "Archives: %s"
+msgstr "Arkiv: %s"
+
+# @ _s
+#: inc/template-tags.php:209
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+# @ _s
+#: inc/template-tags.php:211
+msgid "Archives"
+msgstr "Arkiv"
+
+#: inc/template-tags.php:315
+msgid "Pingback:"
+msgstr "Pingback:"
+
+# @ _s
+#: inc/template-tags.php:315 inc/template-tags.php:333
+#: template-parts/content-cards.php:42 template-parts/content-carousel.php:21
+#: template-parts/content-page--frontpage.php:13
+#: template-parts/content-page--no-title.php:30
+#: template-parts/content-page.php:33 template-parts/content-single.php:19
+#: template-parts/content-summary.php:20
+msgid "Edit"
+msgstr "Rediger"
+
+#: inc/template-tags.php:330
+msgid "Your comment is awaiting approval"
+msgstr "Din kommentar afventer godkendelse"
+
+#: inc/template-tags.php:337
+msgid "Reply <span>&darr;</span>"
+msgstr "Svar <span>&darr;</span>"
+
+#: inc/template-tags.php:342
+#, php-format
+msgid ""
+"<span class=\"says\">From</span> %1$s <span class=\"when\">Date</span> %2$s:"
+msgstr ""
+"<span class=\"says\">Fra</span> %1$s <span class=\"when\">Dato</span> %2$s:"
+
+# @ _s
+#: inc/template-tags.php:348
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s kl. %2$s"
+
+#: page--alphabetic.php:11
+msgid "Template for Alphabetic Index"
+msgstr "Skabelon til alfabetisk indeks"
+
+#: page--categories.php:9
+msgid "Page Template for Categories Overview"
+msgstr "Skabelon til overblik over kategorier"
+
+#: page--frontpage.php:11
+msgid "Front Page"
+msgstr "Forside"
+
+#: page--fullwidth.php:9
+msgid "Full Width for Page Builder"
+msgstr "Fuld bredde til Page Builder"
+
+# @ _s
+#: search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søgeresultat efter: %s"
+
+# @ _s
+#: searchform.php:3 searchform.php:4
+msgid "Search for:"
+msgstr "Søg efter:"
+
+#: searchform.php:4
+msgid "Search &hellip;"
+msgstr "Søg &hellip;"
+
+#: searchform.php:6
+msgid "Search"
+msgstr "Søg"
+
+#: template-parts/content-cards.php:32
+#, php-format
+msgid "Permanent link til %s"
+msgstr "Permanent link til %s"
+
+#: template-parts/content-cards.php:41 template-parts/content-carousel.php:11
+#: template-parts/content-carousel.php:20 template-parts/content-summary.php:10
+#: template-parts/content-summary.php:19
+#, php-format
+msgid "Permanent link to %s"
+msgstr "Permanent link til %s"
+
+#: template-parts/content-cards.php:41 template-parts/content-carousel.php:20
+#: template-parts/content-summary.php:19
+msgid "Read more about "
+msgstr "Læs mere om "
+
+# @ _s
+#: template-parts/content-categories.php:65
+msgid "See all posts"
+msgstr "Se alle artikler"
+
+# @ _s
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+# @ _s
+#: template-parts/content-none.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Klar til at udgive din første artikel? <a href=\"%1$s\">Start her</a>."
+
+# @ _s
+#: template-parts/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Der var desværre ikke noget, der matchede dine søgeord. Prøv venligst igen "
+"med nogle andre søgeord."
+
+# @ _s
+#: template-parts/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Vi kan desværre ikke finde det, du leder efter. Prøv evt. at søge."
+
+# @ _s
+#: template-parts/content-page--frontpage.php:17
+#: template-parts/content-page--no-title.php:23
+#: template-parts/content-page.php:26 template-parts/content-single.php:28
+#: template-parts/content.php:32
+msgid "Pages:"
+msgstr "Sider:"
+
+# @ _s
+#: template-parts/content.php:25
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Læs mere %s <span class=\"meta-nav\">&rarr;</span>"
+
+# @ _s
+#, fuzzy
+#~ msgid "%1$s kl. %2$s"
+#~ msgstr "%1$s: %2$s"
+
+# @ _s
+#~ msgid "by %1$s"
+#~ msgstr "af %1$s"
+
+#~ msgid "Powered by %s"
+#~ msgstr "%s under motorhjelmen"
+
+#~ msgid "Web &amp; Design by %1$s"
+#~ msgstr "Web: %1$s"

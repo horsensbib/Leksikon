@@ -1,0 +1,138 @@
+// Basic settings
+// --------------
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size();
+	line-height: $font__line-height-body;
+}
+
+// Headings
+// --------
+h1 {
+	font-family: $font__headings;
+	@include font-size(2.25);
+	margin: 0 0 1em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+h2, h3, h4, h5, h6 {
+	font-family: $font__main;
+}
+h2 {
+	margin: 0 0 1em;
+}
+h3 {
+	@include font-size(1.25);
+	margin: 0 0 1.5em;
+}
+h4 {
+	@include font-size(1);
+	margin: 0 0 1.5em;
+}
+h5 {
+	@include font-size(1);
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	word-spacing: .05em;
+	margin: 0 0 1.5em;
+}
+h6 {
+	@include font-size(.75);
+	text-transform: uppercase;
+	margin: 0 0 1.5em;
+}
+
+// Copy
+// ----
+p {
+	margin: 0 0 1.5em;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+  padding: 0 0 0 0.8em;
+  margin: 0 0 1.5em -1em;
+  border-left: .2em solid $color__brand--secondary;
+	font-style: italic;
+  p {
+    margin-bottom: 1.5em;
+  }
+  em {font-style: normal;}
+  small {
+    display: block;
+    line-height: $font__line-height-body;
+    color: $color__text-input;
+  }
+  cite {
+		color: $color__text-input;
+	  display: block;
+	  text-align: right;
+	  &::before {
+		  content: '— ';
+	  }
+  }
+
+  // Float right with text-align: right
+  &.alignright {
+    float: right;
+    padding-right: 1em;
+    padding-left: 0;
+    border-right: .5em solid $color__brand--secondary;
+    border-left: 0;
+    p,
+    small {
+      text-align: right;
+    }
+  }
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $color__background-pre;
+	border-radius: .5em;
+	font-family: $font__pre;
+	@include font-size(0.9375);
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em 1em;
+}
+
+code, kbd, tt, var {
+	font-family: $font__code;
+	@include font-size(0.9375);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark, ins {
+	background: $color__background-ins;
+	text-decoration: none;
+	padding: 0 .25em;
+	border-radius: .25em;
+}
+
+big {
+	font-size: 125%;
+}
+
+strong {
+	font-weight: $font__main--bold;
+}

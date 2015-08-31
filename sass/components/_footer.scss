@@ -1,0 +1,104 @@
+// Footer Illustrations
+// --------------------
+.footer-illustrations {
+	background: url(img/sky.svg) bottom repeat-x;
+	background: url(img/sky.svg) bottom repeat-x;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+	
+	&::after {
+		background: url(img/skyline.png) 20% bottom repeat-x;
+		background-size: 1446px 254px;
+		content: '';
+		display: block;
+		height: 254px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 10;
+	}
+}
+
+// Fat Footer
+// ----------
+.fat-footer {
+	background: $color--brand__primary url(img/waves.png) top repeat-x;
+	background: $color--brand__primary url(img/waves.svg) top repeat-x;
+	background-size: 15px 24px;
+	color: mix($color__brand--primary,$color__background-body,39.5%);  
+	overflow: hidden;
+	padding: 6em 0 2em;
+	position: relative;
+
+	button,
+	input[type="button"],
+	input[type="submit"] {
+		@extend .button--solid--color__secondary;
+	}
+	input[type="reset"] {
+		@extend .button--bordered--color__secondary;
+	}
+	
+	a {
+		color: $color__background-body;
+	}
+	a:hover,
+	a:active,
+	a:focus {
+		text-decoration: none;
+	}
+	a:visited {}
+	
+	i,
+	a i {
+		color: $color__brand--accent;
+	}
+	
+	.fat-footer__inner {
+		@include clearfix;
+		@extend %row;
+		position: relative;
+		z-index: 10;
+	}
+	
+	.widget-area {
+		@include span(12 of 12);
+		@include breakpoint($medium_up) {
+			@include span(6 of 12);
+		}
+		@include breakpoint($large) {
+			@include span(3 of 12);
+		}
+	}
+	
+	.widget-title {
+		color: $color__text-header--fatfooter;
+		text-shadow: 0 1px 0 rgba(255,255,255,.3);
+	}
+}
+
+
+// Site Footer
+// -----------
+.site-footer {
+	@extend .site-header;
+	position: relative;
+	z-index: 10;
+}
+.site-footer__inner {
+	@extend .site-header__inner;
+	
+	padding-bottom: 3em;
+}
+// .site-branding: See _header.scss
+.site-info {
+  @include span(3 of 12);
+	@include breakpoint(600px) {@include span(9 of 12);}
+	@include font-size(0.75);
+	
+	padding-top: .5em; 
+	text-align: right;
+	
+	i {color: $color__brand--secondary;}
+}

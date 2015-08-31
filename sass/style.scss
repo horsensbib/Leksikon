@@ -1,0 +1,45 @@
+/*!
+Theme Name: Leksikon
+Theme URI: http://underscores.me/
+Author: Morten Brunbjerg Bech
+Author URI: http://bechster.dk/
+Description: A theme originally made for local historic encyclopaedia Horsens Leksikon.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: leksikon
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Leksikon is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+@import url(//fonts.googleapis.com/css?family=Roboto:400,400italic,900,900italic|Roboto+Slab:400,700);
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+@import "variables/variables";
+@import "mixins";
+@import "normalize";
+
+// Susy - How to use grids: http://www.zell-weekeat.com/context-with-susy/ & http://www.sitepoint.com/sass-grids-neat-susy/
+@import "../bower_components/susy/sass/susy";
+
+// Breakpoints - How to use: http://www.zell-weekeat.com/susy2-tutorial-2/ 
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint"; 
+
+@import "typography";
+@import "layout";
+@import "elements/elements";
+@import "navigation/navigation";
+@import "components/components";
+@import "animation";
+@import "utilities/accessibility";
+@import "utilities/alignments";
+@import "utilities/clearings";
+@import "utilities/infinite-scroll";
+@import "media/media";

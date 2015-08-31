@@ -1,0 +1,31 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	overflow-x: scroll;
+}
+tr:nth-child(odd) {
+	background: mix($color__brand--accent,$color__background-body,19.5%);	
+}
+tr:hover {
+	background: mix($color__brand--accent,$color__background-body,29.5%);
+}
+th,
+td {
+	@include font-size(1);
+	border: 1px solid $color__brand--accent;
+	line-height: 1.5em;
+	padding: .5em;
+	vertical-align: top;
+}
+th {
+	background: $color__brand--accent;
+	border: 1px solid $color__brand--accent;
+	text-align: left;
+}
+.wgs_wrapper {
+	tr {background: none;}
+	th,
+	td {
+		border: none;
+	}
+}

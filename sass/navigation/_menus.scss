@@ -1,0 +1,260 @@
+// Main Navigation
+// ---------------
+.main-navigation {
+	
+	.nav-menu {
+		@include span(12 of 12);
+		@include breakpoint($medium_up) {
+  		@include span(9 of 12);
+		}
+	}
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		@include breakpoint($medium_up) {
+			border: none;
+			float: left;
+			padding: 0.5em;
+		}
+		@include breakpoint($medium) {
+			@include font-size(.75);
+		}
+		padding: 0.5em 0;
+		border-top: 1px solid lighten($color__brand--primary,25%);
+		position: relative;
+		
+		&:hover,
+		&.focus {
+			& > a {
+			}
+		}
+		
+		&.call-to-action,
+		&.menu-header-search {
+		}
+		
+		&.call-to-action {
+			
+			@include breakpoint($medium_up) {
+				float: right;
+				padding: 0 0 0 1em;
+			}
+			
+			a {
+				@extend .button;
+				@extend .button--bordered--color__primary;
+			}
+		}
+		
+		&.menu-header-search {
+			@include breakpoint($large) {
+				float: right;
+				padding: 0 0 0 0.5em;
+				width: 45%;
+			}
+			@include breakpoint($medium_up) {
+				float: right;
+				padding: 0 0 0 0.5em;
+				width: 35%;
+			}
+		
+			.search-field {
+				@include breakpoint($medium) {
+					@include font-size(.75);
+				}
+			}
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: $color__text-main;
+	}
+
+	.current_page_item,
+	.current-menu-item,
+	.current_page_ancestor {
+		& > a {font-weight: $font__main--bold;}
+		
+		&.call-to-action > a {font-weight: normal;}		
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+.menu-toggle {
+	@include span(4 of 12 last);
+	@include font-size(.75);
+	max-width: 7em;
+	letter-spacing: .1em;
+	text-align: left;
+	text-transform: uppercase;
+	i {
+		float: right;
+		margin-top: .075em;
+		transition: all 0.5s ease;
+	}
+}
+@include breakpoint($medium_up) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+.main-navigation.toggled {
+	.nav-menu {
+		margin-top: 1em;
+	}
+	.menu-toggle i {
+		transform: rotate(270deg);
+	}
+}
+
+// Sub Navigation
+// --------------
+.simple-section-nav {
+	background: mix($color__brand--primary,$color__background-body,9.5%);
+	border-radius: .5em;
+	padding: 2.4em 0 1em;
+
+	h1 {padding: 0 1.25em;}
+	&.widget {
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+		li {
+			list-style: none;
+			padding: 0;
+		
+			&::before {display: none;}
+			&.current_page_item {
+				a {
+					background: mix($color__brand--primary,$color__background-body,19.5%);
+					
+					@extend %list-chevron-menu;
+				}
+				.children a {
+					background: none;
+					&:hover,
+					&:active,
+					&:focus {background: mix($color__brand--primary,$color__background-body,19.5%);}
+					
+					&::after {display: none;}
+				}
+			}
+			a {
+				border-top: 1px solid mix($color__brand--primary,$color__background-body,29.5%);
+				padding: .5em 1.5em;
+				&:hover,
+				&:active,
+				&:focus {background: mix($color__brand--primary,$color__background-body,19.5%);}
+			}
+			li a {padding-left: 3em;}
+		}
+	}	
+	a {
+		color: $color__text-main;
+		display: block;
+		text-decoration: none;
+	}
+}
+
+
+// Comments Navigation
+// -------------------
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	
+	border-top: 1px solid $color__background-hr;
+	padding: 1.5em 0;
+
+	.site-main & {
+		clear: both;
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	& .nav-previous::before,
+	& .nav-next::after {
+			@include font-size(1.5);
+			color: $color__brand--accent;
+			font-family: 'Material Icons';
+			-webkit-font-feature-settings: 'liga';
+			-webkit-font-smoothing: antialiased;
+			text-decoration: none;
+			vertical-align: middle;
+	}
+
+	& .nav-previous {
+		float: left;
+		width: 50%;
+		&::before {content: 'chevron_left';}
+	}
+
+	& .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+		&::after {content: 'chevron_right';}
+	}
+}
+/* .single .post-navigation {
+	@include breakpoint($large) {
+		@include font-size(1.25);
+		@include span(8 of 12);
+		@include push(2);
+		&.has-toc {
+			@include push(1);
+		}
+	}
+} */

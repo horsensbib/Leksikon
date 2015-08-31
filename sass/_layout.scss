@@ -1,0 +1,11 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+
+// Layout Grid - Susy: See variables/_structure.scss
+
+// Rows
+// ------------
+%row {
+	@include container;
+	width: 90%;
+}

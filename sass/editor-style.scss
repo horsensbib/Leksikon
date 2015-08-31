@@ -1,0 +1,42 @@
+// Styles for the visual editor
+// ----------------------------
+
+// Reset
+@import "normalize";
+
+// Variables
+@import "variables/variables";
+
+// Mixins
+@import "mixins";
+
+// Body reset
+// ----------
+body#tinymce.wp-editor {
+	color: $color__text-main;
+	line-height: $font__line-height-body;
+	font-family: $font__main;
+	margin: 1em auto;
+	max-width: 760px;
+}
+
+// Typography
+// ----------
+@import "typography";
+
+// Links
+// -----
+
+// Images
+// ------
+#tinymce.wp-editor img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+// Typography
+@import url(//fonts.googleapis.com/css?family=Roboto:400,400italic,900,900italic|Roboto+Slab:400,700);
+
+// Buttons
+@import "components/buttons";

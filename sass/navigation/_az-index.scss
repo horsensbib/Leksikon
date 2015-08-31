@@ -1,0 +1,26 @@
+/* Page Template Layout: See _archive.scss */
+#azindex-1 {
+}
+.azlinks,
+.azpagelinks {text-align: center;}
+.azindex {
+	min-width: 15em;
+	ul {
+		list-style: none;
+	}
+	li {
+		word-break: hyphenate;
+		word-wrap: break-word;
+		h2 {
+			border-bottom: 1px solid $color__background-hr;
+		}
+	}
+}
+.azcont {
+	@include font-size(1);
+	color: $color__text-input;
+	font-weight: normal;
+}
+.azpagelinks {
+	border-top: 1px solid $color__background-hr;	
+}
