@@ -740,8 +740,7 @@ a {
   background: #e7eef0 url(img/stripes.png) top repeat-x; }
 
 .site-header__inner, .site-footer__inner {
-  content: "";
-  display: table;
+  overflow: hidden;
   padding: 2em 0 1em; }
 
 .site-branding {
@@ -761,13 +760,13 @@ a {
       padding-top: .15em; } }
 
 .footer-illustrations {
-  background: url(img/sky.svg) bottom repeat-x;
-  background: url(img/sky.svg) bottom repeat-x;
+  background: url(img/sky.png) top repeat-x;
+  background: url(img/sky.svg) top repeat-x;
   height: 320px;
   overflow: hidden;
   position: relative; }
   .footer-illustrations::after {
-    background: url(img/skyline.png) 20% bottom repeat-x;
+    background: url(img/skyline.png) bottom repeat-x;
     background-size: 1446px 254px;
     content: '';
     display: block;
@@ -779,7 +778,6 @@ a {
 
 .fat-footer {
   background: #86a9b3 url(img/waves.png) top repeat-x;
-  background: #86a9b3 url(img/waves.svg) top repeat-x;
   background-size: 15px 24px;
   color: #cfdde1;
   overflow: hidden;

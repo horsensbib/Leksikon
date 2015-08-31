@@ -2,8 +2,9 @@
 	background: mix($color__brand--primary,$color__background-body,19.5%) url(img/stripes.png) top repeat-x;
 }
 .site-header__inner {
-  @include clearfix; 
+  // @include clearfix; 
 	@extend %row;
+	overflow: hidden;
 	
 	padding: 2em 0 1em;
 }
