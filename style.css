@@ -2223,6 +2223,21 @@ input[type="submit"]:visited,
   .wgs_wrapper .gcsc-branding td.gcsc-branding-text-name div.gcsc-branding-text {
     text-align: left; }
 
+table.gssb_c {
+  margin-top: 2em; }
+
+table.gsc-completion-container {
+  font-size: 16px;
+  font-size: 1rem;
+  background: white;
+  border: 1px solid #BBB;
+  font-family: Roboto, sans-serif; }
+  table.gsc-completion-container tr, table.gsc-completion-container td {
+    background: white;
+    border: none; }
+    table.gsc-completion-container tr:hover, table.gsc-completion-container tr:focus, table.gsc-completion-container td:hover, table.gsc-completion-container td:focus {
+      background: #f4f7f8; }
+
 .mapp-layout {
   border: 1px solid #86a9b3;
   clear: both;

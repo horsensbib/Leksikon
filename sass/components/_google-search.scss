@@ -133,3 +133,18 @@
 		td.gcsc-branding-text-name div.gcsc-branding-text {text-align: left;}
 	}
 }
+
+// Search Suggestions
+table.gssb_c {margin-top: 2em;}
+table.gsc-completion-container {
+	@include font-size(1);
+	background: white;
+	border: 1px solid #BBB;
+	font-family: $font__main;
+	tr, td {
+		background: white;
+		border:none;
+		&:hover,
+		&:focus {background: mix($color__brand--primary,$color__background-body,9.5%)}
+	}
+}
