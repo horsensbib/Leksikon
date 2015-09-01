@@ -103,7 +103,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 figure {
-  margin: 1em 40px; }
+  margin: 0; }
 
 hr {
   box-sizing: content-box;
@@ -2223,6 +2223,11 @@ input[type="submit"]:visited,
   .wgs_wrapper .gcsc-branding td.gcsc-branding-text-name div.gcsc-branding-text {
     text-align: left; }
 
+.mapp-layout {
+  border: 1px solid #86a9b3;
+  clear: both;
+  margin-bottom: 1.5em; }
+
 #wpadminbar,
 .site {
   -webkit-animation: fade_in .5s ease-in 1;
@@ -2380,15 +2385,18 @@ input[type="submit"]:visited,
     z-index: 100000;
     /* Above WP toolbar. */ }
 
-.alignleft {
+.alignleft,
+figure.alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em; }
+  margin: 0 1.5em 1.5em 0; }
 
-.alignright, .single-post .type-post .edit-link {
+.alignright, .single-post .type-post .edit-link,
+figure.alignright,
+.single-post .type-post figure.edit-link {
   display: inline;
   float: right;
-  margin-left: 1.5em; }
+  margin: 0 0 1.5em 1.5em; }
 
 .aligncenter {
   display: block;
@@ -2448,15 +2456,25 @@ object {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-.wp-caption {
+.wp-caption,
+figure.wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%; }
-  .wp-caption img[class*="wp-image-"] {
+  .wp-caption img[class*="wp-image-"],
+  figure.wp-caption img[class*="wp-image-"] {
     display: block;
     margin-left: auto;
     margin-right: auto; }
-  .wp-caption .wp-caption-text {
-    margin: 0.8075em 0; }
+  .wp-caption .wp-caption-text,
+  figure.wp-caption .wp-caption-text {
+    font-size: 12px;
+    font-size: 0.75rem;
+    margin: 0.8075em 0;
+    color: #666;
+    font-style: italic; }
+    .wp-caption .wp-caption-text em,
+    figure.wp-caption .wp-caption-text em {
+      font-style: normal; }
 
 .wp-caption-text {
   text-align: center; }
