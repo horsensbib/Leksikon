@@ -3,7 +3,8 @@
 
 .blog,
 .archive,
-.search-results {
+.search-results,
+.error404 {
 	#primary {
 		@include span(12 of 12);
 	

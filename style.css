@@ -1850,7 +1850,8 @@ input[type="submit"]:visited,
 
 .blog #primary,
 .archive #primary,
-.search-results #primary {
+.search-results #primary,
+.error404 #primary {
   width: 95.8333333333%;
   float: left;
   margin-left: 2.0833333333%;
@@ -1858,14 +1859,16 @@ input[type="submit"]:visited,
   @media (min-width: 750px) {
     .blog #primary,
     .archive #primary,
-    .search-results #primary {
+    .search-results #primary,
+    .error404 #primary {
       width: 70.8333333333%;
       float: left;
       margin-left: 2.0833333333%;
       margin-right: 2.0833333333%; } }
 .blog #secondary,
 .archive #secondary,
-.search-results #secondary {
+.search-results #secondary,
+.error404 #secondary {
   width: 95.8333333333%;
   float: left;
   margin-left: 2.0833333333%;
@@ -1873,7 +1876,8 @@ input[type="submit"]:visited,
   @media (min-width: 750px) {
     .blog #secondary,
     .archive #secondary,
-    .search-results #secondary {
+    .search-results #secondary,
+    .error404 #secondary {
       width: 20.8333333333%;
       float: right;
       margin-left: 2.0833333333%;
@@ -1881,7 +1885,8 @@ input[type="submit"]:visited,
       margin-top: 3.6em; } }
 .blog .taxonomy-description,
 .archive .taxonomy-description,
-.search-results .taxonomy-description {
+.search-results .taxonomy-description,
+.error404 .taxonomy-description {
   font-size: 20px;
   font-size: 1.25rem; }
 
