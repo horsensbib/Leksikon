@@ -2480,19 +2480,18 @@ figure.wp-caption {
     display: block;
     margin-left: auto;
     margin-right: auto; }
-  .wp-caption .wp-caption-text,
-  figure.wp-caption .wp-caption-text {
-    font-size: 12px;
-    font-size: 0.75rem;
-    margin: 0.8075em 0;
-    color: #666;
-    font-style: italic; }
-    .wp-caption .wp-caption-text em,
-    figure.wp-caption .wp-caption-text em {
-      font-style: normal; }
 
-.wp-caption-text {
-  text-align: center; }
+.wp-caption-text,
+.thumbcaption {
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0.8075em 0;
+  color: #666;
+  font-style: italic; }
+  .wp-caption-text em,
+  .thumbcaption em {
+    font-style: normal; }
 
 /*--------------------------------------------------------------
 ## Galleries

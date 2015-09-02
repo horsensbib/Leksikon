@@ -342,3 +342,17 @@ function my_login_logo_url_title() {
     return 'Horsens Leksikon';
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+// Remove Jetpack from Contributors
+function hide_jetpack_from_others() {
+	if ( ! current_user_can( 'author' ) ) {
+		remove_menu_page( 'jetpack' );
+	}
+}
+add_action( 'jetpack_admin_menu', 'hide_jetpack_from_others' );
+function load_admin_style() {
+	if ( ! current_user_can( 'author' ) ) {
+		wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/admin-style.css', false, '1.0.0' );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'load_admin_style' );
