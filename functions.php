@@ -334,24 +334,26 @@ function custom_login_logo() {
 add_action('login_head', 'custom_login_logo');
 
 function my_login_logo_url() {
-    return get_bloginfo( 'http://horsensleksikon.dk/' );
+	return get_bloginfo( 'http://horsensleksikon.dk/' );
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 function my_login_logo_url_title() {
-    return 'Horsens Leksikon';
+	return 'Horsens Leksikon';
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 // Remove Jetpack from Contributors
-function hide_jetpack_from_others() {
-	if ( ! current_user_can( 'author' ) ) {
-		remove_menu_page( 'jetpack' );
+if ( is_plugin_active( 'jetpack/jetpack.php' ) ) {
+	function hide_jetpack_from_others() {
+		if ( ! current_user_can( 'publish_posts' ) ) {
+			remove_menu_page( 'jetpack' );
+		}
 	}
+	add_action( 'jetpack_admin_menu', 'hide_jetpack_from_others' );
 }
-add_action( 'jetpack_admin_menu', 'hide_jetpack_from_others' );
 function load_admin_style() {
-	if ( ! current_user_can( 'author' ) ) {
+	if ( ! current_user_can( 'publish_posts' ) ) {
 		wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/admin-style.css', false, '1.0.0' );
 	}
 }
