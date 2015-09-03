@@ -5,7 +5,7 @@
 ?>
 
 <div>
-<article id="post-<?php the_ID(); ?>" <?php post_class('summary-item'); ?> itemscope="" itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class('summary-item'); ?> itemscope="" itemtype="http://schema.org/Article">
 
 	<header class="entry-header">
 		<h2 class="entry-title" itemprop="name headline"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permanent link to %s', 'leksikon' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -17,7 +17,7 @@
 $excerpt = get_the_excerpt();
 echo string_limit_words($excerpt,28); // Set the number of words to display in the excerpt.	
 ?> &hellip;<br />
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permanent link to %s', 'leksikon' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php _e('Read more about ', 'leksikon') . the_title(); ?></a> 
+			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permanent link to %s', 'leksikon' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark" itemprop="url"><?php _e('Read more about ', 'leksikon') . the_title(); ?></a> 
 <?php edit_post_link( esc_html__( 'Edit', 'leksikon' ), '<span class="edit-link">', '</span>' ); ?>
 		</p>
 	</div><!-- .entry-summary -->

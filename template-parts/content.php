@@ -7,9 +7,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="" itemtype="https://schema.org/Article">
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h1 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -18,7 +18,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content" itemprop="articleBody">
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -29,7 +29,7 @@
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'leksikon' ),
+				'before' => '<div class="page-links" itemprop="pagination">' . esc_html__( 'Pages:', 'leksikon' ),
 				'after'  => '</div>',
 			) );
 		?>

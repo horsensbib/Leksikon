@@ -7,7 +7,7 @@
 
 ?>
 
-<section class="categories">
+<section class="categories" itemscope="" itemtype="https://schema.org/ItemList">
 <?php
 
 $catArgs = array(
@@ -32,10 +32,10 @@ foreach ( $categories as $category ) {
 	);
 ?>
 
-	<div class="the-category category-<?php echo $category->category_nicename; ?>">
+	<div class="the-category category-<?php echo $category->category_nicename; ?>" itemprop="itemListElement">
 
 	<?php
-	echo '<h2><a href="' . get_category_link( $cat_id ) . '">' . $category->name . '</a></h2>';
+	echo '<h2 itemprop="name"><a href="' . get_category_link( $cat_id ) . '">' . $category->name . '</a></h2>';
 			
 	$children = get_terms( $category->taxonomy, array(
 		'parent'    => $cat_id,
@@ -44,10 +44,10 @@ foreach ( $categories as $category ) {
 
 	if ($children) { 
 	?>
-		<ol class="category-children children-of-<?php echo $category->category_nicename; ?>">
+		<ol class="category-children children-of-<?php echo $category->category_nicename; ?>" itemscope="" itemtype="https://schema.org/ItemList">
 		<?php 
 		foreach ($children as $child) {
-			echo '<li class="cat-child"><a href="' . get_category_link( $child->term_id ) . '">' . $child->name . '</a></li>';
+			echo '<li class="cat-child" itemprop="itemListElement"><a href="' . get_category_link( $child->term_id ) . '">' . $child->name . '</a></li>';
 		} 
 		?>
 		</ol>
@@ -56,9 +56,9 @@ foreach ( $categories as $category ) {
 
 query_posts($postArgs);
 	if (have_posts()) { ?>
-		<ul class="category-posts posts-in-<?php echo $category->category_nicename; ?>">
+		<ul class="category-posts posts-in-<?php echo $category->category_nicename; ?>" itemscope="" itemtype="https://schema.org/ItemList">
 	<?php while (have_posts()) : the_post(); ?>
-			<li class="cat-post"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
+			<li class="cat-post" itemprop="itemListElement"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
 	<?php endwhile; ?>
 		</ul>
 

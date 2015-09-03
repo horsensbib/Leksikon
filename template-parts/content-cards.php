@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('summary-item--card masonry__item'); ?> itemscope="" itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class('summary-item--card masonry__item'); ?> itemscope="" itemtype="https://schema.org/Article">
 	
 <?php
 $imgargs = array(
@@ -18,10 +18,10 @@ $imgargs = array(
 $attachments = get_posts($imgargs);
 
 if ( has_post_thumbnail() ) {	// Check if there is a manually chosen thumbnail. ?>
-	<a class="thumbnail list-thumbnail" href="<?php the_permalink() ?>" itemprop="thumbnailUrl"><?php the_post_thumbnail('card'); ?></a> 
+	<a class="thumbnail list-thumbnail" href="<?php the_permalink() ?>" itemprop="url"><?php the_post_thumbnail('card'); ?></a> 
 <?php
 } elseif ( $attachments ) {	// Else, choose the first attached thumbnail. ?>
-	<a class="thumbnail list-thumbnail" href="<?php the_permalink() ?>" itemprop="thumbnailUrl"><?php get_img('card'); ?></a> 
+	<a class="thumbnail list-thumbnail" href="<?php the_permalink() ?>" itemprop="url"><?php get_img('card'); ?></a> 
 <?php } 
 	/* else { 	// Else, display a default image 
 ?><img class="attachment-thumb wp-post-image" alt="Kamera" src="<?php bloginfo('stylesheet_directory'); ?>/img/camera.jpg" />
@@ -33,12 +33,12 @@ if ( has_post_thumbnail() ) {	// Check if there is a manually chosen thumbnail. 
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary" itemprop="description">
-		<p>
+		<p itemprop="description">
 <?php
 $excerpt = get_the_excerpt();
 echo string_limit_words($excerpt,28); // Set the number of words to display in the excerpt.	
 ?> &hellip;<br />
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permanent link to %s', 'leksikon' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php _e('Read more about ', 'leksikon') . the_title(); ?></a> 
+			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permanent link to %s', 'leksikon' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark" itemprop="url"><?php _e('Read more about ', 'leksikon') . the_title(); ?></a> 
 <?php edit_post_link( esc_html__( 'Edit', 'leksikon' ), '<span class="edit-link">', '</span>' ); ?>
 		</p>
 	</div><!-- .entry-summary -->

@@ -11,7 +11,7 @@ __( 'Full Width for Page Builder', 'leksikon' );
 get_header(); ?>
 
 	<div id="primary" class="content-area content-area--full-width">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main" role="main" itemprop="mainContentOfPage">
 			<?php do_action('before_main') ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>

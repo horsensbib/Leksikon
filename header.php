@@ -19,7 +19,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site" itemscope="" itemtype="https://schema.org/WebPage">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'leksikon' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -39,7 +39,7 @@
 <?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="main-navigation" role="navigation" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
 				<button class="menu-toggle button--solid--color__primary" aria-controls="primary-menu" aria-expanded="false"><?php _e( '<i class="material-icons md-16">menu</i> Menu', 'leksikon' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->

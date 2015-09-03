@@ -70,7 +70,7 @@ if ( ! function_exists( 'leksikon_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function leksikon_posted_on() {
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	$time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="dateCreated datePublished">%2$s</time>';
 	/* if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
 	} */
@@ -84,11 +84,11 @@ function leksikon_posted_on() {
 
 	$posted_on = sprintf(
 		esc_html_x( 'Posted on %s', 'post date', 'leksikon' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark" itemprop="dateCreated datePublished">' . $time_string . '</a>'
 	);
 
 	echo '<span class="posted-on">' . __('Posted on', 'leksikon') . ' <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span> ';
-	echo '<span class="updated-on">' . __('Updated on', 'leksikon') . ' <time class="updated" datetime="' . get_the_modified_date( 'c' ) . '">' . get_the_modified_date() . '</time></span>';
+	echo '<span class="updated-on">' . __('Updated on', 'leksikon') . ' <time class="updated" datetime="' . get_the_modified_date( 'c' ) . '" itemprop="lastReviewed dateModified">' . get_the_modified_date() . '</time></span>';
 
 }
 endif;
@@ -100,7 +100,7 @@ if ( ! function_exists( 'leksikon_posted_by' ) ) :
 function leksikon_posted_by() {
 	
 	$byline = sprintf(
-		'<strong class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></strong>'
+		'<strong class="author vcard" itemprop="editor author creator"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></strong>'
 	);
 
 	echo '<p class="byline">' . __( 'Posted by ' , 'leksikon' ) . $byline . '</p>'; // WPCS: XSS OK.
@@ -118,7 +118,7 @@ function leksikon_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'leksikon' ) );
 		if ( $tags_list ) {
-			printf( '<div class="tags-links">' . esc_html__( '%1$s', 'leksikon' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			printf( '<div class="tags-links" itemprop="keywords">' . esc_html__( '%1$s', 'leksikon' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 	
@@ -138,15 +138,15 @@ function leksikon_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'leksikon' ) );
 		if ( $categories_list && leksikon_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'leksikon' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links" itemprop="keywords">' . esc_html__( 'Posted in %1$s', 'leksikon' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}	
 	} else {
 		echo __('Posted' , 'lekikon');
 	}
 	
-	echo '<span class="posted-on"> <time class="updated" datetime="' . get_the_date( 'c' ) . '">' . get_the_date() . '</time></span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on"> <time class="updated" datetime="' . get_the_date( 'c' ) . '" itemprop="dateCreated datePublished">' . get_the_date() . '</time></span>'; // WPCS: XSS OK.
 	echo '<span class="separator"> - </span>';
-	echo '<span class="updated-on">' . __( 'Updated on ', 'leksikon' ) . '<time class="updated" datetime="' . get_the_modified_date( 'c' ) . '">' . get_the_modified_date() . '</time></span>';
+	echo '<span class="updated-on">' . __( 'Updated on ', 'leksikon' ) . '<time class="updated" datetime="' . get_the_modified_date( 'c' ) . '" itemprop="lastReviewed dateModified">' . get_the_modified_date() . '</time></span>';
 	echo '</p>';
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -318,14 +318,14 @@ function leksikon_comment( $comment, $args, $depth ) {
 		default :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
+		<article id="comment-<?php comment_ID(); ?>" class="comment" itemscope="" itemtype="http://schema.org/Comment">
 			<span class="author-img"><?php
 				$avatar_size = 80;
 				if ( '0' != $comment->comment_parent )
 				$avatar_size = 50;
 				echo get_avatar( $comment, $avatar_size );
 			?></span>
-			<div class="comment-content">
+			<div class="comment-content" itemprop="comment">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 					<p><em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting approval', 'leksikon' ); ?></em></p>
 				<?php endif; ?>
@@ -340,8 +340,8 @@ function leksikon_comment( $comment, $args, $depth ) {
 					<?php
 						/* translators: 1: comment author, 2: date and time */
 						printf( __( '<span class="says">From</span> %1$s <span class="when">Date</span> %2$s:', 'leksikon' ),
-							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
-							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+							sprintf( '<span class="fn" itemprop="author creator">%s</span>', get_comment_author_link() ),
+							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s" itemprop="dateCreated datePublished">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */

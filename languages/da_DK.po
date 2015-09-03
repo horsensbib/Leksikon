@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: leksikon\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-08-30 14:33+0200\n"
-"PO-Revision-Date: 2015-08-30 14:34+0200\n"
+"POT-Creation-Date: 2015-09-02 15:38+0200\n"
+"PO-Revision-Date: 2015-09-02 15:38+0200\n"
 "Last-Translator: Morten Brunbjerg Bech <bech@rephlex.dk>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -33,12 +33,12 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: js/leksikon.js\n"
 
 # @ _s
-#: 404.php:15
+#: 404.php:16
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ups! Den side kan vi ikke finde."
 
 # @ _s
-#: 404.php:19
+#: 404.php:20
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -47,12 +47,12 @@ msgstr ""
 "søg."
 
 # @ _s
-#: 404.php:27
+#: 404.php:28
 msgid "Most Used Categories"
 msgstr "Mest anvendte kategorier"
 
 # @ _s
-#: 404.php:44
+#: 404.php:45
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Prøv at kigge i arkivet over måneder. %1$s"
@@ -143,23 +143,23 @@ msgstr "Sidefod - 4. kolonne"
 msgid "Excerpt"
 msgstr "Uddrag"
 
-#: functions.php:312
+#: functions.php:306
 msgid "RSS URL"
 msgstr "RSS URL"
 
-#: functions.php:313
+#: functions.php:307
 msgid "Google Profile URL"
 msgstr "Google profil URL"
 
-#: functions.php:314
+#: functions.php:308
 msgid "Twitter Profile URL"
 msgstr "Twitter profil URL"
 
-#: functions.php:315
+#: functions.php:309
 msgid "Facebook Profile URL"
 msgstr "Facebook profil URL"
 
-#: functions.php:316
+#: functions.php:310
 msgid "Linkedin Profile URL"
 msgstr "Linkedin profil URL"
 
@@ -458,15 +458,15 @@ msgid "Search Results for: %s"
 msgstr "Søgeresultat efter: %s"
 
 # @ _s
-#: searchform.php:3 searchform.php:4
+#: searchform.php:10 searchform.php:11
 msgid "Search for:"
 msgstr "Søg efter:"
 
-#: searchform.php:4
+#: searchform.php:11
 msgid "Search &hellip;"
 msgstr "Søg &hellip;"
 
-#: searchform.php:6
+#: searchform.php:13
 msgid "Search"
 msgstr "Søg"
 
