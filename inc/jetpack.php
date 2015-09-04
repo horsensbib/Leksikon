@@ -28,3 +28,10 @@ function leksikon_infinite_scroll_render() {
 		get_template_part( 'template-parts/content', get_post_format() );
 	}
 } // end function leksikon_infinite_scroll_render
+
+/**
+	* Add Support for Photon
+	*/
+if( function_exists( 'jetpack_photon_url' ) ) {
+	add_filter( 'jetpack_photon_url', 'jetpack_photon_url', 10, 3 );
+}
