@@ -38,7 +38,7 @@
 			<div class="site-branding">
 <?php if ( get_theme_mod( 'leksikon_logo' ) ) : ?>
 				<div class="site-logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php 
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php 
 						// http://kwight.ca/2012/12/02/adding-a-logo-uploader-to-your-wordpress-site-with-the-theme-customizer/
 						echo esc_url( get_theme_mod( 'leksikon_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
 				</div>
