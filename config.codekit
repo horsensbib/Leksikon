@@ -1489,6 +1489,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/site-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 49153,
+		"inputAbbreviatedPath": "\/img\/site-icon.png",
+		"outputAbbreviatedPath": "\/img\/site-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/sky.png": {
 		"fileType": 32768,
 		"ignore": 0,
