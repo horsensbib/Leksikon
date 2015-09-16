@@ -1,4 +1,7 @@
 a#insert-jetpack-contact-form,
-div#wpseo_meta {
+div#wpseo_meta,
+div#page-links-to,
+div#submitdiv div#publicize,
+div#submitdiv div.misc-yoast {
 	display: none;
 }

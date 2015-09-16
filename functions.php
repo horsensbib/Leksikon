@@ -70,13 +70,13 @@ function leksikon_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+/*	add_theme_support( 'post-formats', array(
 		'aside',
 		'image',
 		'video',
 		'quote',
 		'link',
-	) );
+	) ); */
 
 	// Set up the WordPress core custom background feature.
 	/* 
@@ -351,7 +351,7 @@ function hide_jetpack_from_others() {
 }
 add_action( 'jetpack_admin_menu', 'hide_jetpack_from_others' );
 function load_admin_style() {
-	if ( ! current_user_can( 'publish_posts' ) ) {
+	if ( ! current_user_can( 'edit_others_posts' ) ) {
 		wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/admin-style.css', false, '1.0.0' );
 	}
 }
