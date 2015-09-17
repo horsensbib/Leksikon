@@ -88,7 +88,7 @@ function leksikon_posted_on() {
 	);
 
 	echo '<span class="posted-on">' . __('Posted on', 'leksikon') . ' <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span> ';
-	echo '<span class="updated-on">' . __('Updated on', 'leksikon') . ' <time class="updated" datetime="' . get_the_modified_date( 'c' ) . '" itemprop="lastReviewed dateModified">' . get_the_modified_date() . '</time></span>';
+	echo '<span class="updated-on">' . __('Updated on', 'leksikon') . ' <time class="updated" datetime="' . get_the_modified_date( 'c' ) . '" itemprop="dateModified">' . get_the_modified_date() . '</time></span>';
 
 }
 endif;
@@ -146,7 +146,7 @@ function leksikon_entry_footer() {
 	
 	echo '<span class="posted-on"> <time class="updated" datetime="' . get_the_date( 'c' ) . '" itemprop="dateCreated datePublished">' . get_the_date() . '</time></span>'; // WPCS: XSS OK.
 	echo '<span class="separator"> - </span>';
-	echo '<span class="updated-on">' . __( 'Updated on ', 'leksikon' ) . '<time class="updated" datetime="' . get_the_modified_date( 'c' ) . '" itemprop="lastReviewed dateModified">' . get_the_modified_date() . '</time></span>';
+	echo '<span class="updated-on">' . __( 'Updated on ', 'leksikon' ) . '<time class="updated" datetime="' . get_the_modified_date( 'c' ) . '" itemprop="dateModified">' . get_the_modified_date() . '</time></span>';
 	echo '</p>';
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {

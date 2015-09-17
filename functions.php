@@ -356,3 +356,14 @@ function load_admin_style() {
 	}
 }
 add_action( 'admin_enqueue_scripts', 'load_admin_style' );
+
+/* 
+ * info: http://simplemediacode.info/snippets/itemprop-attributes-for-wordpress-serp-results/
+ * as WordPress plugin http://wordpress.org/extend/plugins/itempropwp/
+ */
+add_filter('post_thumbnail_html','leksikon_image_itemprop',10,3 );
+function leksikon_image_itemprop($html, $post_id, $post_image_id){
+ $html = str_replace('src',' itemprop="image" src',$html);
+ return $html;
+}
+?>
