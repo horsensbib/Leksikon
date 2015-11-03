@@ -25,6 +25,19 @@
 			text-align: left;
 		}
 	}
+	h1,
+	p {
+		opacity: 0;
+		animation-delay: 0.3s;
+		animation-fill-mode: forwards;
+		animation-duration: 0.6s;
+	}
+	h1 {
+		animation-name: bounce-right;
+	}
+	p {
+		animation-name: bounce-left;
+	}
 	h2 {font-size: 1.8em;}
 	.edit-link {display:none;}
 	.button {margin: .25em 0;}
