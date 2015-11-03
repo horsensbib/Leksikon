@@ -16,6 +16,7 @@ a {
 	&:active {
 		outline: 0;
 	}
+	&.hashtag:first-letter {display: none;}
 }
 
 .tags-links {

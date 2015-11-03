@@ -366,4 +366,16 @@ function leksikon_image_itemprop($html, $post_id, $post_image_id){
  $html = str_replace('src',' itemprop="image" src',$html);
  return $html;
 }
+
+/*
+ * Remove hash-character in hashtags from front end.
+ */
+/* include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+if ( is_plugin_active( 'hashtagger/hashtagger.php' ) ) {
+	function remove_hash_character($content) {
+		$content = str_replace('#', '',$content);
+		return $content;
+	}
+	add_filter('the_content','remove_hash_character');
+} */
 ?>
