@@ -446,8 +446,6 @@ a {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
-  a.hashtag:first-letter {
-    display: none; }
 
 .tags-links a, .tagcloud a {
   border-radius: 2em;

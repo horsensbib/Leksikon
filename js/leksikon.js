@@ -86,4 +86,11 @@ jQuery(document).ready(function( $ ){
 		});
 	});
 	
+	// Remove # character from hashtags
+	// --------------------------------
+	$('a.hashtag').each(function() {
+		var strHashtag = $(this).html();
+		$(this).html(strHashtag.substring(1, strHashtag.length));
+	});
+	
 });
