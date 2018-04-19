@@ -25,6 +25,58 @@
 		margin-left: 0;
 	}
 	
+	// Search Result
+	.cse .gsc-control-cse, 
+	.gsc-control-cse {padding: 0;}
+	
+	.cse .gsc-webResult.gsc-result, 
+	.gsc-webResult.gsc-result, 
+	.gsc-imageResult-classic, 
+	.gsc-imageResult-column {
+		padding-left: 0;
+		border: none;
+		&:hover,
+		&:focus {border:none;}
+	}
+	
+	.gsc-result-info {
+		@include font-size(1);
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.gsc-control-cse .gs-spelling, 
+	.gsc-control-cse .gs-result .gs-title, 
+	.gsc-control-cse .gs-result .gs-title * {
+		@include font-size(1.25);
+		line-height: 1.5em;
+		height: auto;
+	}
+	.cse .gs-result .gs-snippet, 
+	.gs-result .gs-snippet, 
+	.cse .gs-spelling-original, 
+	.gs-spelling-original {
+		@include font-size(1);
+		line-height: 1.5em;
+	}
+	.gs-web-image-box, 
+	.gs-promotion-image-box {margin: 0 1em 1em 0;}
+	.gs-web-image-box img.gs-image, 
+	.gs-promotion-image-box img.gs-promotion-image {border: none;}
+	
+	// Sort Drop Down
+	.gsc-control-cse .gsc-option-menu-container,
+	.gsc-control-cse .gsc-option-menu {@include font-size(.75);}
+	.gsc-selected-option-container {
+		@include font-size(.75);
+		border-radius: .5em;
+		line-height: 1.5em;
+		max-width: auto;
+		min-width: auto;
+		padding: .25em 28px .25em .5em;
+		width: auto!important;
+	}
+	.gsc-option-menu-item {padding: 0 1em;}
+	
 	// Pagination
 	.gsc-results {
 		.gsc-cursor-box {text-align: center;}
@@ -88,58 +140,6 @@
 		right: 4em;
 		top: .65em;
 	}
-	
-	// Search Result
-	.cse .gsc-control-cse, 
-	.gsc-control-cse {padding: 0;}
-	
-	.cse .gsc-webResult.gsc-result, 
-	.gsc-webResult.gsc-result, 
-	.gsc-imageResult-classic, 
-	.gsc-imageResult-column {
-		padding-left: 0;
-		border: none;
-		&:hover,
-		&:focus {border:none;}
-	}
-	
-	.gsc-result-info {
-		@include font-size(1);
-		margin-left: 0;
-		padding-left: 0;
-	}
-	.gsc-control-cse .gs-spelling, 
-	.gsc-control-cse .gs-result .gs-title, 
-	.gsc-control-cse .gs-result .gs-title * {
-		@include font-size(1.25);
-		line-height: 1.5em;
-		height: auto;
-	}
-	.cse .gs-result .gs-snippet, 
-	.gs-result .gs-snippet, 
-	.cse .gs-spelling-original, 
-	.gs-spelling-original {
-		@include font-size(1);
-		line-height: 1.5em;
-	}
-	.gs-web-image-box, 
-	.gs-promotion-image-box {margin: 0 1em 1em 0;}
-	.gs-web-image-box img.gs-image, 
-	.gs-promotion-image-box img.gs-promotion-image {border: none;}
-	
-	// Sort Drop Down
-	.gsc-control-cse .gsc-option-menu-container,
-	.gsc-control-cse .gsc-option-menu {@include font-size(.75);}
-	.gsc-selected-option-container {
-		@include font-size(.75);
-		border-radius: .5em;
-		line-height: 1.5em;
-		max-width: auto;
-		min-width: auto;
-		padding: .25em 28px .25em .5em;
-		width: auto!important;
-	}
-	.gsc-option-menu-item {padding: 0 1em;}
 	*/
 
 	// Branding
