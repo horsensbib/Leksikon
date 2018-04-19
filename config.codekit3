@@ -7,7 +7,7 @@
 		"uuidString": "C2E4E970-F4E4-4974-9349-E00776EE9B0C"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/404.php": {
 		"cB": 0,
@@ -1318,6 +1318,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/default-avatar.png": {
+		"ft": 32768,
+		"iS": 12928,
+		"oA": 0,
+		"oAP": "\/img\/default-avatar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/img\/logo.png": {
 		"ft": 32768,
@@ -3420,7 +3431,8 @@
 	"creationDate": 509318383,
 	"displayValue": "leksikon",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets_teal"
+	"iconImageName": "brackets_teal",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -5223,6 +5235,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

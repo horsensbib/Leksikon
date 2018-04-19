@@ -250,10 +250,11 @@ function string_limit_words($string, $word_limit)
 */
 function get_img($size) {
 	$attachments = get_children(array('post_parent' => get_the_ID(), 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order'));
-	if ( ! is_array($attachments) ) continue;
-	$count = count($attachments);
-	$first_attachment = array_shift($attachments);
-	echo wp_get_attachment_image($first_attachment->ID, $size);
+	if ( ! is_array($attachments) ){ /* continue; */ ; }else{
+		$count = count($attachments);
+		$first_attachment = array_shift($attachments);
+		echo wp_get_attachment_image($first_attachment->ID, $size);
+	}
 }
 
 /**
